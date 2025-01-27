@@ -15,3 +15,5 @@
 | nom_piece       | VARCHAR            | 30 | Nom de la pièce | - |
 | id_objet       | INTEGER            | 11 | Identifiant unique de l'objet | PRIMARY KEY, AUTOINCREMENT |
 | nom_objet       | VARCHAR            | 30 | Nom de l'objet (ex: "Poignard") | - |
+| heure_arrivee       | TIME            | - | Heure de l'arrivée dans la pièce | - |
+| heure_depart       | TIME            | - | Heure de départ dans la pièce | - |
