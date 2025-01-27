@@ -56,3 +56,31 @@ CREATE TABLE IF NOT EXISTS posseder (
     FOREIGN KEY (id_piece) REFERENCES pieces(id),
     FOREIGN KEY (id_objet) REFERENCES objets(id)
 );
+
+DELIMITER //
+CREATE TRIGGER before_jouer_insert
+BEFORE INSERT ON jouer
+FOR EACH ROW
+BEGIN
+    IF (NEW.role = 'Maître du jeu') THEN
+        IF (SELECT COUNT(*) FROM jouer WHERE id_partie = NEW.id_partie AND role = 'Maître du jeu') > 0 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Il ne peut y avoir qu\'un seul Maître du jeu par partie';
+        END IF;
+    END IF;
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER before_jouer_update
+BEFORE UPDATE ON jouer
+FOR EACH ROW
+BEGIN
+    IF (NEW.role = 'Maître du jeu') THEN
+        IF (SELECT COUNT(*) FROM jouer WHERE id_partie = NEW.id_partie AND role = 'Maître du jeu' AND id_joueur != NEW.id_joueur) > 0 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Il ne peut y avoir qu\'un seul Maître du jeu par partie';
+        END IF;
+    END IF;
+END;
+//
+DELIMITER ;
