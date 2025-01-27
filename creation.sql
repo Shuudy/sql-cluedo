@@ -47,3 +47,11 @@ CREATE TABLE IF NOT EXISTS presence (
     FOREIGN KEY (id_personnage) REFERENCES personnages(id),
     FOREIGN KEY (id_piece) REFERENCES pieces(id)
 );
+
+CREATE TABLE IF NOT EXISTS posseder (
+    id_piece INT,
+    id_objet INT,
+    PRIMARY KEY (id_piece, id_objet),
+    FOREIGN KEY (id_piece) REFERENCES pieces(id),
+    FOREIGN KEY (id_objet) REFERENCES objets(id)
+);
