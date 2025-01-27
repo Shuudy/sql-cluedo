@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS joueurs (
 CREATE TABLE IF NOT EXISTS parties (
     id INT PRIMARY KEY AUTO_INCREMENT,
     date_partie DATETIME NOT NULL
+    heure_fin TIME,
 );
 
 CREATE TABLE IF NOT EXISTS personnages (
