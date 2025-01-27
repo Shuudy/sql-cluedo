@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS jouer (
     id_partie INT,
     id_joueur INT,
     id_personnage INT,
-    role VARCHAR(30) NOT NULL,
+    role VARCHAR(30) NOT NULL CHECK (role IN ('Maître du jeu', 'Utilisateur', 'Observateur')),
     PRIMARY KEY (id_partie, id_joueur),
     FOREIGN KEY (id_partie) REFERENCES parties(id),
     FOREIGN KEY (id_joueur) REFERENCES joueurs(id),
