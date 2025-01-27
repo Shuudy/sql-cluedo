@@ -16,6 +16,7 @@ J'ai mis en place un système de "partie" et j'ai considéré qu'on pouvait avoi
 | role_joueur       | VARCHAR            | 30 | Rôle du joueur | CHECK (role_joueur IN ('Maître du jeu', 'Utilisateur', 'Observateur')) |
 | id_personnage       | INTEGER            | 11 | Identifiant unique du personnage | PRIMARY KEY, AUTOINCREMENT |
 | nom_personnage       | VARCHAR            | 30 | Nom du personnage | - |
+| couleur       | VARCHAR            | 15 | Couleur du pion | - |
 | id_piece       | INTEGER            | 11 | Identifiant unique de la pièce | PRIMARY KEY, AUTOINCREMENT |
 | nom_piece       | VARCHAR            | 30 | Nom de la pièce | - |
 | id_objet       | INTEGER            | 11 | Identifiant unique de l'objet | PRIMARY KEY, AUTOINCREMENT |
