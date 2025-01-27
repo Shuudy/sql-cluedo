@@ -23,6 +23,12 @@ J'ai mis en place un système de "partie" et j'ai considéré qu'on pouvait avoi
 | heure_arrivee       | TIME            | - | Heure de l'arrivée dans la pièce | - |
 | heure_depart       | TIME            | - | Heure de départ dans la pièce | - |
 
+## Ordre d'exécution des fichiers .sql
+
+1. `creation.sql` : Ce fichier crée toutes les tables nécessaires pour le jeu Cluedo.
+2. `peuplement.sql` : Ce fichier insère les données de base dans les tables (objets, pièces, personnages).
+3. `test.sql` : Ce fichier insère des données de test pour simuler une partie.
+
 ## Requêtes à réaliser
 
 1. Lister tous les personnages du jeu
