@@ -6,11 +6,11 @@ J'ai mis en place un système de "partie" et j'ai considéré qu'on pouvait avoi
 
 ## Dictionnaire de données
 
-| Nom  | Type de données | Taille | Description | Contraintes
+| Code  | Type de données | Taille | Description | Contraintes
 | ----------------- | --------------- | -- | -------------------------------------- | ----- |
 | id_partie         | INTEGER         | 11 | Identifiant unique de la partie | PRIMARY KEY, AUTOINCREMENT |
 | date_partie       | DATETIME            | - | Date à laquelle la partie a été jouée | - |
-| date_partie       | TIME            | - | Heure à laquelle la partie a été terminée | - |
+| heure_fin       | TIME            | - | Heure à laquelle la partie a été terminée | - |
 | id_joueur       | INTEGER            | 11 | Identifiant unique du joueur | PRIMARY KEY, AUTOINCREMENT |
 | nom_joueur       | VARCHAR            | 30 | Nom du joueur | - |
 | role_joueur       | VARCHAR            | 30 | Rôle du joueur | CHECK (role_joueur IN ('Maître du jeu', 'Utilisateur', 'Observateur')) |
