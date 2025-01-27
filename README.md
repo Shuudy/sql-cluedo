@@ -94,3 +94,8 @@ J'ai mis en place un système de "partie" et j'ai considéré qu'on pouvait avoi
     WHERE nom = 'Bureau';
     ```
     Ici, nous sommes obligés de supprimer d'abord les enregistrements qui référencent la pièce, sinon une violation de contrainte de clé étrangère se produira.
+    
+Dans toutes les requêtes, je n'ai pas pris en compte la partie (trop répétitif). S'il avait fallu le faire, j'aurais simplement ajouté la condition suivante :
+```sql
+WHERE id_partie = 1
+```
