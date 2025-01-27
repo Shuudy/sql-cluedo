@@ -24,3 +24,11 @@ INSERT INTO presence (id_partie, id_personnage, id_piece, heure_arrivee, heure_d
     (@partie_id, 2, 2, '08:05:00', '08:35:00'),
     (@partie_id, 3, 3, '08:10:00', '08:40:00'),
     (@partie_id, 4, 4, '08:15:00', '08:45:00');
+
+INSERT INTO posseder (id_partie, id_piece, id_objet) VALUES
+    (@partie_id, 1, 1),
+    (@partie_id, 1, 2),
+    (@partie_id, 2, 3),
+    (@partie_id, 3, 4),
+    (@partie_id, 4, 5),
+    (@partie_id, 5, 6);
